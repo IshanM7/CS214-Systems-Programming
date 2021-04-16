@@ -4,9 +4,9 @@
 
 #include "LL.h"
 
-Node* insert(Node* head, strbuf_t* buff){
+LL* insert(LL* head, strbuf_t* buff){
 	if(head == NULL){
-        head = malloc(sizeof(Node));
+        head = malloc(sizeof(LL));
         head->word = malloc(buff->used);
         head->count = 1;
         head->next = NULL;
@@ -14,8 +14,8 @@ Node* insert(Node* head, strbuf_t* buff){
         //printf("Head1: %s\n",head->word);
         return head;
     }
-    Node* ptr = head;
-    Node* prev = NULL;
+    LL* ptr = head;
+    LL* prev = NULL;
     while(ptr != NULL){
         //printf("Hi: %s ptr: %s\n",buff->data,ptr->word);
         
@@ -24,7 +24,7 @@ Node* insert(Node* head, strbuf_t* buff){
             ptr->count++;
             return head;
         }else if(strcmp(buff->data,ptr->word) < 0){
-            Node* new = malloc(sizeof(Node));
+            LL* new = malloc(sizeof(LL));
             new->count = 1;
             new->word = malloc(buff->used);
             new->next = NULL;
@@ -42,7 +42,7 @@ Node* insert(Node* head, strbuf_t* buff){
         }else{
             prev = ptr;
             if(ptr->next == NULL){
-                Node* new = malloc(sizeof(Node));
+                LL* new = malloc(sizeof(LL));
                 new->count = 1;
                 new->word = malloc(buff->used);
                 new->next = NULL;
@@ -57,7 +57,7 @@ Node* insert(Node* head, strbuf_t* buff){
     //printf("Head4: %s\n",head->word);
     return head;
 }
-void printList(Node *node)
+void printList(LL *node)
 {
   while (node != NULL)
   {
@@ -66,8 +66,8 @@ void printList(Node *node)
   }
   printf("\n");
 }
-void freeList (Node* head) {
-    Node* tempNode = head;
+void freeList (LL* head) {
+    LL* tempNode = head;
     while (head != NULL) {
         tempNode = head;
         head = head->next;

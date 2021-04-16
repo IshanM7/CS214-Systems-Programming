@@ -1,13 +1,13 @@
 #include "strbuf.h"
 
-typedef struct Node {
+typedef struct LL {
     char* word;
     double frequency;
     int count;
-    struct Node* next;
-} Node;
+    struct LL* next;
+} LL;
 
 
-Node* insert(Node* head, strbuf_t* word);
-void printList(Node *node);
-void freeList(Node *node);
+LL* insert(LL* head, strbuf_t* word);
+void printList(LL *node);
+void freeList(LL *node);

@@ -1,5 +1,5 @@
 main: main.o strbuf.o LL.o Queue.o
-	gcc -g -pthread -Wvla -Wall -fsanitize=address,undefined -o main main.o strbuf.o LL.o Queue.o
+	gcc -g -pthread -Wvla -Wall -fsanitize=address,undefined -o main main.o strbuf.o LL.o Queue.o -lm
 
 main.o: main.c strbuf.h
 	gcc -c -g -Wvla -Wall -fsanitize=address,undefined main.c
