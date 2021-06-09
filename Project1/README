@@ -1,0 +1,9 @@
+Name: Ishan Mody(iam47) 
+Partner: Fiaz Mushfeq(fm398)
+
+To test our program we first started with the given test case and manipulated that along with creating other test 
+cases with edge cases that could have caused issues. some of these test cases were new lines and spaces before the first word,
+words greater than width, words that are exactly the size of the width etc. We verified the output by comparing it to the expected outputs given 
+and predicted different edge cases and how they should be displayed. along with simply counting the width to confirm that it all fit. 
+
+
